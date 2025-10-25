@@ -12,6 +12,8 @@ const Detailinfo = () => {
           if (data && Array.isArray(data)) {
   const data2=data.filter(x=>x.toyId==id)
   setval(data2)}
+    window.scrollTo(0, 0);
+
     },[data,id])
    // console.log(val)
     return (

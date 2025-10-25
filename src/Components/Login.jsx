@@ -5,6 +5,7 @@ import { AuthContext } from './AuthContext';
 import { auth, googleprovider } from '../firebase.init';
 import { signInWithPopup } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import DocumentMeta from 'react-document-meta';
 const Login = () => {
     const {user}=use(AuthContext)
      const navigate=useNavigate()
@@ -16,7 +17,9 @@ const Login = () => {
     //     )
 
     // }
-   
+   const meta={
+    title:"Toyhouse-login"
+}
     const nav=()=>{
         if(user)
         {navigate('/')}
@@ -51,7 +54,7 @@ const Login = () => {
     
         }
     return (
-
+  <DocumentMeta{...meta}>
         <div className='bg-[#f4ebea] h-screen flex  justify-center pt-36  '>
             <form onSubmit={handlelogin}>
                 <fieldset className="fieldset bg-base-200  border-base-300 shadow-md rounded-box w-xs border p-4  mx-auto ">
@@ -82,6 +85,7 @@ const Login = () => {
 
             </form>
         </div>
+        </DocumentMeta>
     );
 };
 

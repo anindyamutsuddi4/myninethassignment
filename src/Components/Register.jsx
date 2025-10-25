@@ -4,8 +4,12 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from './AuthContext';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, googleprovider } from '../firebase.init';
+import DocumentMeta from 'react-document-meta';
 
 const Register = () => {
+    const meta={
+    title:"Toyhouse-Register"
+}
     const navigate=useNavigate()
     const { createuser, setuser, updateuser } = use(AuthContext)
     const handlesubmit = (e) => {
@@ -50,6 +54,7 @@ const Register = () => {
 
     }
     return (
+        <DocumentMeta {...meta}>
         <div className='bg-[#f4ebea] h-screen flex  justify-center pt-36  '>
             <form onSubmit={handlesubmit}>
                 <fieldset className="fieldset bg-base-200  border-base-300 shadow-md rounded-box w-xs border p-4  mx-auto ">
@@ -82,7 +87,7 @@ const Register = () => {
         </div>
 
 
-
+</DocumentMeta>
     );
 };
 
