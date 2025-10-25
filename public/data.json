@@ -1,0 +1,75 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "/s-l1200.jpg",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Remote Control Sports Car",
+    "sellerName": "Speedy Toys Hub",
+    "sellerEmail": "sales@speedytoyshub.com",
+    "price": 35.50,
+    "rating": 4.5,
+    "availableQuantity": 50,
+    "description": "A high-speed remote control sports car with durable tires and smooth steering. Perfect for racing fun indoors and outdoors.",
+    "pictureURL": "/img_2382.webp",
+    "subCategory": "Remote Control Toys"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Plush Teddy Bear",
+    "sellerName": "Cuddle Corner",
+    "sellerEmail": "support@cuddlecorner.com",
+    "price": 19.99,
+    "rating": 4.9,
+    "availableQuantity": 100,
+    "description": "A soft and fluffy teddy bear made with premium cotton fabric. A perfect cuddle buddy for kids of all ages.",
+    "pictureURL": "/public/1000066847.webp",
+    "subCategory": "Soft Toys"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Wooden Train Set",
+    "sellerName": "Eco Kids Store",
+    "sellerEmail": "hello@ecokidsstore.com",
+    "price": 42.00,
+    "rating": 4.8,
+    "availableQuantity": 40,
+    "description": "A beautifully crafted wooden train set that includes tracks, engines, and carriages. Designed to boost motor skills and creativity.",
+    "pictureURL": "/0659776_8-to-10-inch-animal-series-plush-toys-for-baby-gift-toy.jpeg",
+    "subCategory": "Wooden Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Barbie Fashion Doll",
+    "sellerName": "Doll House BD",
+    "sellerEmail": "info@dollhousebd.com",
+    "price": 28.75,
+    "rating": 4.6,
+    "availableQuantity": 85,
+    "description": "A stylish Barbie doll with trendy outfits and accessories. Encourages imaginative role-play and storytelling.",
+    "pictureURL": "/51337.970.jpg",
+    "subCategory": "Dolls & Figurines"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Kids Kitchen Playset",
+    "sellerName": "FunPlay Zone",
+    "sellerEmail": "contact@funplayzone.com",
+    "price": 55.00,
+    "rating": 4.4,
+    "availableQuantity": 60,
+    "description": "A realistic kitchen playset complete with utensils, pots, pans, and pretend food items. Perfect for role-playing cooking games.",
+    "pictureURL": "/30f3236ac20a557a742623c844e9576203a924e7b0d4270e6f6bee3148a8cf8e.webp",
+    "subCategory": "Role Play Toys"
+  }
+
+]
