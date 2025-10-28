@@ -36,7 +36,7 @@ const Login = () => {
             )
             .catch(error => {
                 console.log(error.message)
-                toast('Do registration first')
+               // toast('Do registration first')
             }
             )
     }
@@ -44,7 +44,9 @@ const Login = () => {
         signInWithPopup(auth, googleprovider)
             .then(res => {
                 console.log(res.user)
+                toast("You have successfully signed in")      
                 setuser(res.user)
+                navigate('/')
                 if (user) {
                     navigate('/')
                 }

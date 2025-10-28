@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { toast } from 'react-toastify';
 const Register = () => {
     const meta = {
         title: "Toyhouse-Register"
@@ -31,6 +32,8 @@ const Register = () => {
                     )
                     //console.log(user)
                     navigate('/')
+                    toast("You have successfully signed up")
+
                 }
                 ).catch(error => {
                     console.log(error)
@@ -48,7 +51,7 @@ const Register = () => {
             .then(res => {
                 //console.log(res.user)
                 setuser(res.user)
-
+toast("You have successfully signed up")
                 navigate('/')
 
             }

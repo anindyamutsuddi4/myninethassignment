@@ -50,7 +50,7 @@ navigate('/login')
     }
     return (
          <DocumentMeta {...meta}>
-<div className="pt-20 px-4 md:px-8 lg:px-16">
+<div className="bg-[#f4ebea]   pt-20 px-4 md:px-8 lg:px-16 pb-75">
   <div className="flex flex-col lg:flex-row gap-6 md:gap-8 bg-lime-950/10 p-5 md:p-8 rounded-xl max-w-[320px] md:max-w-[400px] lg:max-w-[690px] mx-auto">
 
     <div className="flex items-center gap-5 bg-lime-950 p-6 md:p-8 rounded-xl shadow-md w-full lg:w-[380px]">
