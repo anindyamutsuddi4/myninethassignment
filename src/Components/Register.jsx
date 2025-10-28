@@ -16,13 +16,23 @@ const Register = () => {
     }
     const navigate = useNavigate()
     const { createuser, setuser, updateuser } = use(AuthContext)
+    const [msg,setmsg]=useState("")
     const handlesubmit = (e) => {
         const name = e.target.name.value
         const photo = e.target.photourl.value
         e.preventDefault()
+       const regex = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
+   
         createuser(e.target.email.value, e.target.password.value)
             .then(res => {
                 //console.log(res.user)
+              if( regex.test(e.target.password.value)){
+                setmsg(<div className='text-green-700 font-semibold'>Password is valid</div>)
+              }
+              else{
+ setmsg(<div className='text-red-700 font-semibold'>Password is invalid</div>)
+  return
+              }
                 updateuser({//object set kore dicchi
                     displayName: name,
                     photoURL: photo
@@ -78,17 +88,17 @@ toast("You have successfully signed up")
 
 
                         <label className="label">Email</label>
-                        <input type="email" name="email" className="input" placeholder="Email" />
+                        <input required type="email" name="email" className="input" placeholder="Email" />
 
                         <label className="label">Password</label>
                         <div className='relative'>
-                            <input type={watch?"text":"password"} name="password" className="input " placeholder="Password" />
+                            <input required type={watch?"text":"password"} name="password" className="input " placeholder="Password" />
                         <button type="button" onClick={onwatch } className='absolute top-[35%] right-3 z-10' id="togglePassword">
                              {watch ? <FaEyeSlash />:<FaEye /> } 
                         </button>
                         </div>
                         
-
+{msg}
 
                         <button className="btn btn-neutral mt-4">Sign Up</button>
                         <Link className='text-center' to="/login">Already have ab account?<span className='text-indigo-700 text-center'> Sign in</span></Link>

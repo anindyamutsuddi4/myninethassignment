@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import {  NavLink, useNavigate } from 'react-router';
 import { AuthContext } from './AuthContext';
+import { toast } from 'react-toastify';
 // import { signOut } from 'firebase/auth';
 // import { auth } from '../firebase.init';
 
@@ -23,6 +24,7 @@ const Navbar = () => {
    const handlelogout=()=>{
         logout().then(()=>{
           navigate('/')
+          toast("You have successfully logged out")
         })
         .catch(error=>console.log(error))
     }
