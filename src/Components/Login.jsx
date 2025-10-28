@@ -1,5 +1,5 @@
 import React, { use, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from './AuthContext';
 import { auth, googleprovider } from '../firebase.init';
@@ -31,7 +31,8 @@ const Login = () => {
                 //console.log(res.user)
                 setuser(res.user)
                 toast("Login successful!")
-                navigate('/')
+                navigate(`${location.state ? location.state : "/"}`)
+
             }
             )
             .catch(error => {
@@ -40,15 +41,17 @@ const Login = () => {
             }
             )
     }
+    const location = useLocation()
     const handle = () => {
         signInWithPopup(auth, googleprovider)
             .then(res => {
                 //console.log(res.user)
                 toast("You have successfully signed in")
                 setuser(res.user)
-                navigate('/')
+                navigate(`${location.state ? location.state : "/"}`)
                 if (user) {
-                    navigate('/')
+                    navigate(`${location.state ? location.state : "/"}`)
+
                 }
             }
             )
@@ -68,13 +71,13 @@ const Login = () => {
             });
 
     }
- const [value, setValue] = useState("");
-// const enter=(e)=>{
-//     if(e.key=="Enter"){
-//         setValue(e.target.value)
-//         //console.log(value)
-//     }
-// }
+    const [value, setValue] = useState("");
+    // const enter=(e)=>{
+    //     if(e.key=="Enter"){
+    //         setValue(e.target.value)
+    //         //console.log(value)
+    //     }
+    // }
     const [a, seta] = useState(false)
     const button = () => {
         seta(!a)
@@ -112,7 +115,7 @@ const Login = () => {
  */}
 
                                 <label className="label">Email</label>
-                                <input   onChange={(e)=>setValue(e.target.value)} type="email" name="email" className="input" placeholder="Email" />
+                                <input onChange={(e) => setValue(e.target.value)} type="email" name="email" className="input" placeholder="Email" />
 
                                 <label className="label">Password</label>
                                 <input required type="password" name="password" className="input" placeholder="Password" />
