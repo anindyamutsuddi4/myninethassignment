@@ -20,15 +20,15 @@ const Login = () => {
     const meta = {
         title: "Toyhouse-login"
     }
-    const nav = () => {
-        if (user) { navigate('/') }
-    }
+    // const nav = () => {
+    //     if (user) { navigate('/') }
+    // }
     const { userlogin, setuser, resetpass } = use(AuthContext)
     const handlelogin = (e) => {
         e.preventDefault()
         userlogin(e.target.email.value, e.target.password.value)
             .then(res => {
-                console.log(res.user)
+                //console.log(res.user)
                 setuser(res.user)
                 toast("Login successful!")
                 navigate('/')
@@ -110,10 +110,10 @@ const Login = () => {
                                 <label className="label">Password</label>
                                 <input type="password" name="password" className="input" placeholder="Password" />
 
-                                <button onClick={nav} className="btn btn-neutral mt-4">Sign In</button>
+                                <button type="submit" className="btn btn-neutral mt-4">Sign In</button>
                                 <Link className='text-center' to="/register">Doesn't have an account?<span className='text-indigo-700 text-center'> Sign Up</span></Link>
                                 <p onClick={button} className='text-center underline'>Forgot Password?</p>
-                                <button onClick={handle} className="border border-gray-400  p-2 rounded-md flex items-center gap-1 text-gray-600 text-[17px]  w-full justify-center hover:bg-gray-200 hover:border-gray-400 hover:text-gray-800 transition-all duration-200">
+                                <button type="button" onClick={handle} className="border border-gray-400  p-2 rounded-md flex items-center gap-1 text-gray-600 text-[17px]  w-full justify-center hover:bg-gray-200 hover:border-gray-400 hover:text-gray-800 transition-all duration-200">
                                     <FcGoogle size={18} />
                                     Login with Google
                                 </button>
