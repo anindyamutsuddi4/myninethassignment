@@ -36,14 +36,14 @@ const Login = () => {
             )
             .catch(error => {
                 console.log(error.message)
-                toast('Do registration first')
+                //toast('Do registration first')
             }
             )
     }
     const handle = () => {
         signInWithPopup(auth, googleprovider)
             .then(res => {
-                console.log(res.user)
+                //console.log(res.user)
                 toast("You have successfully signed in")
                 setuser(res.user)
                 navigate('/')
@@ -68,6 +68,13 @@ const Login = () => {
             });
 
     }
+ const [value, setValue] = useState("");
+// const enter=(e)=>{
+//     if(e.key=="Enter"){
+//         setValue(e.target.value)
+//         //console.log(value)
+//     }
+// }
     const [a, seta] = useState(false)
     const button = () => {
         seta(!a)
@@ -84,7 +91,7 @@ const Login = () => {
                                 <fieldset className="fieldset  bg-base-200 border-base-300 rounded-box w-xs border p-4">
 
                                     <label className="label">Email</label>
-                                    <input type="email" required name="email" className="input" placeholder="Email" />
+                                    <input type="email" value={value} required name="email" className="input" placeholder="Email" />
 
                                     <button type="submit" className="btn btn-neutral mt-4">Reset</button>
                                 </fieldset>
@@ -105,10 +112,10 @@ const Login = () => {
  */}
 
                                 <label className="label">Email</label>
-                                <input type="email" name="email" className="input" placeholder="Email" />
+                                <input   onChange={(e)=>setValue(e.target.value)} type="email" name="email" className="input" placeholder="Email" />
 
                                 <label className="label">Password</label>
-                                <input type="password" name="password" className="input" placeholder="Password" />
+                                <input required type="password" name="password" className="input" placeholder="Password" />
 
                                 <button type="submit" className="btn btn-neutral mt-4">Sign In</button>
                                 <Link className='text-center' to="/register">Doesn't have an account?<span className='text-indigo-700 text-center'> Sign Up</span></Link>
