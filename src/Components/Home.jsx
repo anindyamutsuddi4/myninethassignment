@@ -10,7 +10,7 @@ import Cards from './Cards';
 import DocumentMeta from 'react-document-meta';
 //import pic1 from '../../public/Benefits-of-Wooden-Toys-for-children.webp'
   const meta={
-    title:"Toyhouse-Home"
+    title:"ToyTopia-Home"
 }
 const Home = () => {
     const [data, setdata] = useState([])

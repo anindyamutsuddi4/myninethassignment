@@ -5,7 +5,7 @@ import { FaUser } from "react-icons/fa6";
 import { useNavigate } from 'react-router';
 import DocumentMeta from "react-document-meta";
 const meta={
-    title:"Toyhouse-profile"
+    title:"ToyTopia-profile"
 }
 const Profile = () => {
     

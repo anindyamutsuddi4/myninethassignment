@@ -12,7 +12,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { toast } from 'react-toastify';
 const Register = () => {
     const meta = {
-        title: "Toyhouse-Register"
+        title: "ToyTopia-Register"
     }
     const navigate = useNavigate()
     const { createuser, setuser, updateuser } = use(AuthContext)

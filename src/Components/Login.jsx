@@ -18,7 +18,7 @@ const Login = () => {
 
     // }
     const meta = {
-        title: "Toyhouse-login"
+        title: "ToyTopia-login"
     }
     // const nav = () => {
     //     if (user) { navigate('/') }

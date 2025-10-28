@@ -1,9 +1,13 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import DocumentMeta from 'react-document-meta';
 
 const Detaileddata = ({ toy }) => {
+     const meta={
+    title:"ToyTopia-Details"
+}
     return (
-
+<DocumentMeta {...meta}>
         <div className='bg-[#f4ebea] min-h-screen p-4 pt-20 lg:pt-20'>
             <div className="max-w-md mx-auto bg-black rounded-2xl shadow-xl overflow-hidden border-gray-700
              border-2    hover:border-white">
@@ -76,7 +80,7 @@ const Detaileddata = ({ toy }) => {
             
         </div>
 
-
+</DocumentMeta>
     );
 };
 
