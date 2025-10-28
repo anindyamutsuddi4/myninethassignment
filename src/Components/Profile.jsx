@@ -100,7 +100,7 @@ navigate('/login')
           <input
             type="url"
             name="photo"
-            required
+            
             className="input input-bordered w-full"
             placeholder="Photo URL"
           />
